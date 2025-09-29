@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulti - AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ulti - AI Assistant</h1>
+            <p>Your all-in-one AI companion for code generation, image analysis, and voice assistance</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Chat Interface -->
+            <div class="chat-section">
+                <h2>Chat with Ulti</h2>
+                <div id="chat-messages" class="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="message-input" placeholder="Ask Ulti anything...">
+                    <button id="send-message">Send</button>
+                    <button id="start-recording">🎤 Speak</button>
+                </div>
+            </div>
+
+            <!-- Code Generation -->
+            <div class="feature-section">
+                <h2>Code Generation</h2>
+                <textarea id="code-prompt" placeholder="Describe the code you want to generate..."></textarea>
+                <button id="generate-code">Generate Code</button>
+                <pre id="code-output"></pre>
+            </div>
+
+            <!-- Image Analysis -->
+            <div class="feature-section">
+                <h2>Image Analysis</h2>
+                <input type="file" id="image-upload" accept="image/*">
+                <textarea id="image-prompt" placeholder="What would you like to know about this image?"></textarea>
+                <button id="analyze-image">Analyze Image</button>
+                <div id="image-analysis-result"></div>
+            </div>
+
+            <!-- Text to Speech -->
+            <div class="feature-section">
+                <h2>Text to Speech</h2>
+                <textarea id="tts-text" placeholder="Enter text to convert to speech..."></textarea>
+                <button id="text-to-speech">Convert to Speech</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
